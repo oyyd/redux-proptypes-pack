@@ -1,6 +1,6 @@
 {
   "name": "redux-proptypes-pack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use React.PropTypes in your redux apps.",
   "main": "lib/index.js",
   "scripts": {

@@ -58,7 +58,7 @@ Then the `pack` function will simplely pass your reducers to Redux.
 
 ####Returns
 
-`pack`(Function):
+`pack`(Function)
 
 ### `pack(reducer, validator)`
 
