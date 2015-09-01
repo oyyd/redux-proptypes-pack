@@ -35,6 +35,21 @@ describe('redux-proptypes-pack', () => {
       assert.strictEqual(reducer, packedReducer);
     });
 
+    it('should return the original reducer when passed non-function validator', () => {
+      const pack = packCreator(true);
+      function reducer() {
+        return 0;
+      }
+      const reducer1 = pack(reducer, null);
+      assert.strictEqual(reducer, reducer1);
+      const reducer2 = pack(reducer, undefined);
+      assert.strictEqual(reducer, reducer2);
+      const reducer3 = pack(reducer, '');
+      assert.strictEqual(reducer, reducer3);
+      const reducer4 = pack(reducer, 1);
+      assert.strictEqual(reducer, reducer4);
+    });
+
     it('should return the original reducer when validator is not a function', () => {
       const pack = packCreator(true);
       function reducer() {
